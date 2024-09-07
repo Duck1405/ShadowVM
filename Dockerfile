@@ -1,12 +1,11 @@
 FROM ubuntu:latest
 
-ENV DEBIAN_FRONTEND=noninteractive
 
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends bash curl ca-certificates iproute2 xz-utils bzip2 sudo adduser \
-    && rm -rf /var/lib/apt/lists/* \
-    && curl -o /bin/systemctl https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl3.py
+    && rm -rf /var/lib/apt/lists/*
 
 RUN adduser --disabled-password --home / container
 
@@ -16,5 +15,7 @@ ENV HOME /
 WORKDIR /
 
 COPY ./entrypoint.sh /entrypoint.sh
+COPY ./install.sh /install.sh
+COPY ./run.sh /run.sh
 
 CMD ["/bin/bash", "/entrypoint.sh"]
