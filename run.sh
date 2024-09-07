@@ -1,15 +1,21 @@
 #!/bin/sh
+
 PURPLE='\033[0;35m'
 RED='\033[0;31m'
 GREEN='\033[0;32m'
-YELLOW='\033[0;33m'
 NC='\033[0m'
 
+printf "\033c"
+printf "${GREEN}Starting..${NC}\n"
+sleep 1
+printf "\033c"
 
-DIR=$PWD
+DIR=$PWD # get current dir
+# if current dir is /root print ~
 if [ "$PWD" = "/root"* ]; then
     DIR="~${PWD#/root}"
 fi
+
 
 printf "\033c"
 printf "${YELLOW}________   ____ ____________  ____  __.${NC}"
