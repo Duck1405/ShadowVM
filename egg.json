@@ -5,12 +5,12 @@
         "update_url": null
     },
     "exported_at": "2024-08-21T09:48:24+03:00",
-    "name": "VPS - Egg",
-    "author": "mrnitro2017@gmail.com",
-    "description": "Run a VPS in pterodactyl!",
+    "name": "ShadowVM",
+    "author": "rd105291@outlook.com",
+    "description": "This Egg will allow you to set up and manage a KVM Server within your Pterodactyl/Jexactyl panel!!",
     "features": null,
     "docker_images": {
-        "quay.io\/ydrag0n\/pterodactyl-vps-egg": "quay.io\/ydrag0n\/pterodactyl-vps-egg"
+        "quay.io\/rd105291\/shadowvm": "quay.io\/rd105291\/shadowvm"
     },
     "file_denylist": [],
     "startup": "bash \/run.sh",
@@ -23,7 +23,7 @@
     "scripts": {
         "installation": {
             "script": "#!\/bin\/bash\r\n\r\ncd \/mnt\/server\/",
-            "container": "quay.io\/ydrag0n\/pterodactyl-vps-egg",
+            "container": "quay.io\/rd105291\/shadowvm",
             "entrypoint": "bash"
         }
     },
