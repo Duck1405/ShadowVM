@@ -134,13 +134,7 @@ if [ ! -e "$ROOTFS_DIR/.installed" ]; then
     printf "\033c"
     
     # Display the menu
-   echo "${YELLOW}________   ____ ____________  ____  __.${NC}"
-   echo "${YELLOW}\______ \ |    |   \_   ___ \|    |/ _|${NC}"
-   echo "${YELLOW} |    |  \|    |   /    \  \/|      <  ${NC}"
-   echo "${YELLOW} |    `   \    |  /\     \___|    |  \ ${NC}"
-   echo "${YELLOW}/_______  /______/  \______  /____|__ \${NC}"
-   echo "${YELLOW}        \/                 \/        \/${NC}"
-   echo "${YELLOW}                                       ${NC}"
+  
    echo "${RED}Made By Duck  https://discord.gg/WxP9dfau3d${NC}"  
    echo ""
    echo "${YELLOW}Please pick your image....${NC}"
